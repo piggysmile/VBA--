@@ -1,0 +1,7 @@
+Sub VarName()
+'Change the formula to variable names
+Dim headers: headers = Split("event_date,Last_evet_date,fiscal_period,EPS,diluted_EPS", ",")
+For i = 1 To Application.Sheets.Count
+  Application.Sheets(i).Range("B2").Resize(1, UBound(headers) + 1) = headers
+Next
+End Sub
