@@ -1,3 +1,4 @@
+Sub Namechanger()
 'Change all the worksheets' name
 Dim Rng As Range
 Dim WorkRang As Range
