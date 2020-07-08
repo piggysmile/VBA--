@@ -5,14 +5,14 @@ Dim wsh As Worksheet
 For Each wsh In ThisWorkbook.Worksheets
     iRow = 100
     For iCntr = iRow To 1 Step -1
-        If wsh.Cells(iCntr, 2) = "#N/A N/A" Or wsh.Cells(iCntr, 4) = "#N/A N/A" Then
+        If wsh.Cells(iCntr, 2) = "#N/A N/A" Or wsh.Cells(iCntr, 4) = "#N/A N/A" Or wsh.Cells(iCntr, 3) = "#N/A N/A" Then
             wsh.Rows(iCntr).Delete
+        End If
+        If wsh.Cells(iCntr, 6) = "#N/A N/A" Then
+            wsh.Cells(iCntr, 6) = ""
         End If
         If wsh.Cells(iCntr, 5) = "#N/A N/A" Then
             wsh.Cells(iCntr, 5) = ""
-        End If
-        If wsh.Cells(iCntr, 3) = "#N/A N/A" Then
-            wsh.Cells(iCntr, 3) = ""
         End If
     Next
 Next
